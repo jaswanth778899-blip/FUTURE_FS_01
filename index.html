@@ -1,1029 +1,2483 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Manavarti Jaswanth - AI & ML Student, Data Science Enthusiast and Full Stack Developer.">
+<meta name="description" content="Manavarti Jaswanth - AI & ML Student | Data Science Enthusiast | Full Stack Developer">
 
-    <meta name="keywords" content="Manavarti Jaswanth, AI ML, Data Science, Full Stack Developer, Python, JavaScript, Web Development">
+<title>Manavarti Jaswanth | AI & ML Student</title>
 
-    <meta name="author" content="Manavarti Jaswanth">
+<style>
 
-    <title>Manavarti Jaswanth | AI & ML Student</title>
+/* =========================
+   RESET
+========================= */
 
-    <link rel="stylesheet" href="style.css">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(14,165,233,.15), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(99,102,241,.12), transparent 30%),
+        #050914;
+    color: #f8fafc;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(3,7,18,.94);
+    border-bottom: 1px solid rgba(148,163,184,.15);
+
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 75px;
+
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff !important;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.logo span {
+    color: #38bdf8 !important;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #cbd5e1 !important;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #38bdf8 !important;
+}
+
+.menu-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+
+    color: white;
+    background: #0b1627;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    max-width: 1250px;
+
+    margin: auto;
+    padding: 140px 40px 80px;
+
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 60px;
+
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 14px;
+    margin-bottom: 25px;
+
+    color: #bbf7d0;
+
+    background: rgba(34,197,94,.08);
+    border: 1px solid rgba(34,197,94,.25);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background: #22c55e;
+
+    box-shadow: 0 0 15px #22c55e;
+}
+
+.eyebrow {
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 12px 0 20px;
+
+    color: #ffffff !important;
+
+    font-size: clamp(50px,7vw,82px);
+    line-height: 1;
+
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #38bdf8 !important;
+}
+
+.hero h2 {
+    color: #cbd5e1 !important;
+
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.separator {
+    color: #475569;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    margin-top: 25px;
+
+    color: #94a3b8 !important;
+
+    font-size: 16px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    min-height: 50px;
+
+    padding: 0 21px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.btn-primary {
+    color: #02111d !important;
+    background: #38bdf8;
+
+    box-shadow: 0 10px 30px rgba(56,189,248,.18);
+}
+
+.btn-primary:hover {
+    background: #67d3ff;
+}
+
+.btn-outline {
+    color: #ffffff !important;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid #334155;
+}
+
+.btn-outline:hover {
+    border-color: #38bdf8;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    margin-top: 28px;
+}
+
+.social-row a {
+    color: #94a3b8 !important;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.social-row a:hover {
+    color: #38bdf8 !important;
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-visual {
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.profile-card {
+    width: 310px;
+    min-height: 360px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(56,189,248,.25);
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.5),
+        0 0 60px rgba(56,189,248,.08);
+}
+
+.profile-icon {
+    width: 105px;
+    height: 105px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0ea5e9,
+            #2563eb
+        );
+}
+
+.profile-card-line {
+    width: 55px;
+    height: 2px;
+
+    margin: 25px 0 18px;
+
+    background: #38bdf8;
+}
+
+.profile-label {
+    color: #38bdf8;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.profile-card h3 {
+    margin-top: 8px;
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+.profile-text {
+    margin-top: 10px;
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.floating-chip {
+    position: absolute;
+
+    padding: 8px 12px;
+
+    color: #cbd5e1;
+
+    background: #07101f;
+
+    border: 1px solid rgba(56,189,248,.2);
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.chip-python {
+    top: 18%;
+    left: 5%;
+}
+
+.chip-js {
+    top: 32%;
+    right: 0;
+}
+
+.chip-ai {
+    bottom: 18%;
+    left: 10%;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    width: 100%;
+
+    padding: 100px 24px;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(56,189,248,.05),
+            transparent 30%
+        );
+}
+
+.section-dark {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(56,189,248,.07),
+            transparent 30%
+        ),
+        #070d19;
+}
+
+.section > * {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-kicker {
+    margin-bottom: 10px;
+
+    color: #38bdf8;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    color: #ffffff !important;
+
+    font-size: clamp(36px,5vw,58px);
+
+    line-height: 1.05;
+}
+
+.section-heading h2 span {
+    color: #38bdf8 !important;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-text {
+    color: #94a3b8 !important;
+    font-size: 16px;
+}
+
+.about-text p + p {
+    margin-top: 20px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+    border-radius: 18px;
+}
+
+.stat-number {
+    display: block;
+
+    color: #38bdf8 !important;
+
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.stat-label {
+    color: #94a3b8 !important;
+    font-size: 12px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    min-height: 220px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+    border-radius: 18px;
+
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+}
+
+.skill-icon {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    color: #38bdf8;
+
+    background: rgba(56,189,248,.08);
+
+    border: 1px solid rgba(56,189,248,.15);
+    border-radius: 12px;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.skill-card h3 {
+    color: #ffffff !important;
+    font-size: 17px;
+}
+
+.skill-card p {
+    margin-top: 7px;
+
+    color: #94a3b8 !important;
+
+    font-size: 13px;
+}
+
+.skill-line {
+    width: 100%;
+    height: 4px;
+
+    margin-top: 20px;
+
+    background: #1e293b;
+
+    border-radius: 10px;
+}
+
+.skill-line span {
+    display: block;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #0284c7,
+        #38bdf8
+    );
+
+    border-radius: 10px;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-card {
+    display: grid;
+
+    grid-template-columns: 160px 1fr;
+
+    gap: 40px;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+    border-radius: 20px;
+}
+
+.education-year {
+    color: #38bdf8;
+
+    font-weight: 900;
+}
+
+.education-type {
+    color: #38bdf8;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.education-main h3 {
+    margin-top: 8px;
+
+    color: #ffffff !important;
+
+    font-size: 25px;
+}
+
+.education-main h4 {
+    margin-top: 5px;
+
+    color: #94a3b8 !important;
+
+    font-size: 15px;
+}
+
+.education-details {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.education-details span {
+    padding: 7px 11px;
+
+    color: #cbd5e1;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid #334155;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-list {
+    display: grid;
+    gap: 20px;
+}
+
+.experience-card {
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+    border-radius: 20px;
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.experience-type {
+    color: #38bdf8;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.experience-card h3 {
+    margin-top: 5px;
+    color: #ffffff !important;
+
+    font-size: 23px;
+}
+
+.experience-card h4 {
+    color: #94a3b8 !important;
+    font-size: 14px;
+}
+
+.experience-card > p {
+    margin-top: 18px;
+
+    color: #94a3b8 !important;
+
+    font-size: 14px;
+}
+
+.experience-status.completed {
+    padding: 7px 13px;
+
+    color: #bbf7d0 !important;
+
+    background: rgba(34,197,94,.10);
+
+    border: 1px solid rgba(34,197,94,.25);
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.tags span {
+    padding: 6px 10px;
+
+    color: #cbd5e1 !important;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid #334155;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 310px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.3);
+}
+
+.project-featured {
+    grid-column: span 2;
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-number {
+    color: #38bdf8;
+    font-weight: 900;
+}
+
+.project-link {
+    color: #94a3b8 !important;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.project-link:hover {
+    color: #38bdf8 !important;
+}
+
+.project-content {
+    margin-top: 40px;
+}
+
+.project-category {
+    color: #38bdf8 !important;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.project-content h3 {
+    margin-top: 8px;
+
+    color: #ffffff !important;
+
+    font-size: 25px;
+}
+
+.project-content > p {
+    margin-top: 13px;
+
+    color: #94a3b8 !important;
+
+    font-size: 14px;
+}
+
+/* =========================
+   COMPLETED PROJECTS
+========================= */
+
+.project-completed {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-completed::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #22c55e,
+            #38bdf8,
+            #22c55e
+        );
+}
+
+.project-status.completed {
+    padding: 7px 13px;
+
+    color: #bbf7d0 !important;
+
+    background: rgba(34,197,94,.10);
+
+    border: 1px solid rgba(34,197,94,.25);
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.project-button {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    color: #38bdf8 !important;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+/* =========================
+   INTERESTS
+========================= */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.interest-card {
+    min-height: 220px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+
+    border-radius: 20px;
+}
+
+.interest-card > span {
+    color: #38bdf8;
+    font-weight: 900;
+}
+
+.interest-card h3 {
+    margin-top: 25px;
+    color: #ffffff !important;
+}
+
+.interest-card p {
+    margin-top: 10px;
+    color: #94a3b8 !important;
+    font-size: 13px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: .85fr 1.15fr;
+
+    gap: 60px;
+}
+
+.contact-info h3 {
+    color: #ffffff !important;
+    font-size: 27px;
+}
+
+.contact-info > p {
+    margin-top: 13px;
+    color: #94a3b8 !important;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    color: #38bdf8;
+
+    background: rgba(56,189,248,.08);
+
+    border: 1px solid rgba(56,189,248,.15);
+
+    border-radius: 11px;
+}
+
+.contact-detail span {
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-detail a,
+.contact-detail p {
+    margin-top: 3px;
+
+    color: #e2e8f0 !important;
+
+    font-size: 13px;
+}
+
+.contact-detail a:hover {
+    color: #38bdf8 !important;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1d31,
+            #081120
+        );
+
+    border: 1px solid rgba(148,163,184,.14);
+
+    border-radius: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    margin-bottom: 14px;
+
+    padding: 14px 15px;
+
+    color: #ffffff;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid #334155;
+
+    border-radius: 11px;
+
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #64748b;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 45px 24px 25px;
+
+    background: #030712;
+
+    border-top: 1px solid #1e293b;
+}
+
+.footer-inner {
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-logo {
+    color: #ffffff !important;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.footer-logo span {
+    color: #38bdf8 !important;
+}
+
+.footer-inner p {
+    margin-top: 6px;
+    color: #94a3b8 !important;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #94a3b8 !important;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #38bdf8 !important;
+}
+
+.footer-bottom {
+    max-width: 1180px;
+
+    margin: 30px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #1e293b;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-to-top {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 45px;
+    height: 45px;
+
+    color: #38bdf8;
+
+    background: #07101f;
+
+    border: 1px solid #334155;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+        left: 15px;
+        right: 15px;
+
+        padding: 20px;
+
+        display: none;
+
+        flex-direction: column;
+
+        background: #050914;
+
+        border: 1px solid #334155;
+
+        border-radius: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        padding: 120px 20px 70px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .education-card {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured {
+        grid-column: span 1;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .profile-card {
+        width: 270px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- ===================== HEADER ===================== -->
+<header class="header">
 
-    <header class="header" id="header">
+<nav class="navbar">
 
-        <nav class="navbar">
+<a href="#home" class="logo">
+Jaswanth<span>.</span>
+</a>
 
-            <a href="#home" class="logo">
-                Jaswanth<span>.</span>
-            </a>
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">
-                ☰
-            </button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+</nav>
 
-        </nav>
+</header>
 
-    </header>
 
+<main>
 
-    <!-- ===================== HERO ===================== -->
+<!-- ================= HERO ================= -->
 
-    <main>
+<section id="home" class="hero">
 
-        <section id="home" class="hero">
+<div class="hero-content">
 
-            <div class="hero-bg-glow glow-1"></div>
-            <div class="hero-bg-glow glow-2"></div>
+<div class="status-badge">
+<span class="status-dot"></span>
+Available for opportunities
+</div>
 
-            <div class="hero-content reveal">
+<p class="eyebrow">
+HELLO, I'M
+</p>
 
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    Available for opportunities
-                </div>
+<h1>
+Manavarti
+<span>Jaswanth</span>
+</h1>
 
-                <p class="eyebrow">
-                    HELLO, I'M
-                </p>
+<h2>
+AI & ML Student
+<span class="separator">|</span>
+Data Science Enthusiast
+<span class="separator">|</span>
+Full Stack Developer
+</h2>
 
-                <h1>
-                    Manavarti
-                    <span>Jaswanth</span>
-                </h1>
+<p class="hero-description">
+I am a B.Tech student specializing in Artificial Intelligence and Machine Learning.
+I am interested in Data Science, Machine Learning, and Full Stack Web Development.
+I enjoy building practical projects and learning new technologies.
+My goal is to develop my technical skills through real-world applications.
+</p>
 
-                <h2>
-                    AI & ML Student
-                    <span class="separator">|</span>
-                    Data Science Enthusiast
-                    <span class="separator">|</span>
-                    Full Stack Developer
-                </h2>
+<div class="hero-buttons">
 
-                <p class="hero-description">
-                    I am a B.Tech student specializing in Artificial Intelligence and Machine Learning.
-                    I am interested in Data Science, Machine Learning, and Full Stack Web Development.
-                    I enjoy building practical projects and learning new technologies.
-                    My goal is to develop my technical skills through real-world applications.
-                </p>
+<a href="#projects" class="btn btn-primary">
+View Projects →
+</a>
 
-                <div class="hero-buttons">
+<a href="resume.pdf" download class="btn btn-outline">
+Download Resume ↓
+</a>
 
-                    <a href="#projects" class="btn btn-primary">
-                        View Projects
-                        <span>→</span>
-                    </a>
+</div>
 
-                    <a href="resume.pdf" download class="btn btn-outline">
-                        Download Resume
-                        <span>↓</span>
-                    </a>
+<div class="social-row">
 
-                </div>
+<a href="https://github.com/jaswanth778899-blip"
+target="_blank">
+GitHub ↗
+</a>
 
-                <div class="social-row">
+<a href="https://www.linkedin.com/in/jaswanth-manavarti-9176b5353/"
+target="_blank">
+LinkedIn ↗
+</a>
 
-                    <a href="https://github.com/jaswanth778899-blip"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        GitHub ↗
-                    </a>
+<a href="mailto:jaswanth778899@gmail.com">
+Email ↗
+</a>
 
-                    <a href="https://www.linkedin.com/in/jaswanth-manavarti-9176b5353/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        LinkedIn ↗
-                    </a>
+</div>
 
-                    <a href="mailto:jaswanth778899@gmail.com">
-                        Email ↗
-                    </a>
+</div>
 
-                </div>
 
-            </div>
+<div class="hero-visual">
 
+<div class="profile-card">
 
-            <div class="hero-visual reveal">
+<div class="profile-icon">
+JM
+</div>
 
-                <div class="tech-orbit orbit-one"></div>
-                <div class="tech-orbit orbit-two"></div>
+<div class="profile-card-line"></div>
 
-                <div class="profile-card">
+<p class="profile-label">
+FOCUS
+</p>
 
-                    <div class="profile-icon">
-                        JM
-                    </div>
+<h3>
+AI • ML • WEB
+</h3>
 
-                    <div class="profile-card-line"></div>
+<p class="profile-text">
+Building practical software and intelligent applications.
+</p>
 
-                    <p class="profile-label">
-                        FOCUS
-                    </p>
+<div class="floating-chip chip-python">
+Python
+</div>
 
-                    <h3>
-                        AI • ML • WEB
-                    </h3>
+<div class="floating-chip chip-js">
+JavaScript
+</div>
 
-                    <p class="profile-text">
-                        Building practical software and intelligent applications.
-                    </p>
+<div class="floating-chip chip-ai">
+AI / ML
+</div>
 
-                    <div class="floating-chip chip-python">
-                        Python
-                    </div>
+</div>
 
-                    <div class="floating-chip chip-js">
-                        JavaScript
-                    </div>
+</div>
 
-                    <div class="floating-chip chip-ai">
-                        AI / ML
-                    </div>
+</section>
 
-                </div>
 
-            </div>
+<!-- ================= ABOUT ================= -->
 
-        </section>
+<section id="about" class="section">
 
+<div class="section-heading">
 
-        <!-- ===================== ABOUT ===================== -->
+<p class="section-kicker">
+ABOUT ME
+</p>
 
-        <section id="about" class="section">
+<h2>
+Building skills through
+<span>real projects</span>
+</h2>
 
-            <div class="section-heading reveal">
+</div>
 
-                <p class="section-kicker">
-                    ABOUT ME
-                </p>
+<div class="about-grid">
 
-                <h2>
-                    Building skills through
-                    <span>real projects</span>
-                </h2>
+<div class="about-text">
 
-            </div>
+<p>
+I am a B.Tech student specializing in Artificial Intelligence and Machine Learning.
+I am interested in Data Science, Machine Learning, and Full Stack Web Development.
+</p>
 
-            <div class="about-grid">
+<p>
+I enjoy building practical projects and learning new technologies.
+My goal is to develop my technical skills through real-world applications.
+</p>
 
-                <div class="about-text reveal">
+<p>
+I am currently focused on improving my programming, web development,
+backend, databases and advanced technical skills.
+</p>
 
-                    <p>
-                        I am a B.Tech student specializing in Artificial Intelligence and Machine Learning.
-                        I am interested in Data Science, Machine Learning, and Full Stack Web Development.
-                    </p>
+</div>
 
-                    <p>
-                        I enjoy building practical projects and learning new technologies.
-                        My goal is to develop my technical skills through real-world applications.
-                    </p>
 
-                    <p>
-                        I am currently focused on improving my programming, web development,
-                        backend, databases and advanced technical skills.
-                    </p>
+<div class="about-stats">
 
-                </div>
+<div class="stat-card">
+<span class="stat-number">3rd</span>
+<span class="stat-label">Year B.Tech</span>
+</div>
 
-                <div class="about-stats reveal">
+<div class="stat-card">
+<span class="stat-number">7.9</span>
+<span class="stat-label">CGPA</span>
+</div>
 
-                    <div class="stat-card">
-                        <span class="stat-number">3rd</span>
-                        <span class="stat-label">Year B.Tech</span>
-                    </div>
+<div class="stat-card">
+<span class="stat-number">3+</span>
+<span class="stat-label">Major Projects</span>
+</div>
 
-                    <div class="stat-card">
-                        <span class="stat-number">7.9</span>
-                        <span class="stat-label">CGPA</span>
-                    </div>
+<div class="stat-card">
+<span class="stat-number">2028</span>
+<span class="stat-label">Expected Graduation</span>
+</div>
 
-                    <div class="stat-card">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">Major Projects</span>
-                    </div>
+</div>
 
-                    <div class="stat-card">
-                        <span class="stat-number">2028</span>
-                        <span class="stat-label">Expected Graduation</span>
-                    </div>
+</div>
 
-                </div>
+</section>
 
-            </div>
 
-        </section>
+<!-- ================= SKILLS ================= -->
 
+<section id="skills" class="section section-dark">
 
-        <!-- ===================== SKILLS ===================== -->
+<div class="section-heading">
 
-        <section id="skills" class="section section-dark">
+<p class="section-kicker">
+MY SKILLS
+</p>
 
-            <div class="section-heading reveal">
+<h2>
+Technologies I
+<span>work with</span>
+</h2>
 
-                <p class="section-kicker">
-                    MY SKILLS
-                </p>
+</div>
 
-                <h2>
-                    Technologies I
-                    <span>work with</span>
-                </h2>
+<div class="skills-grid">
 
-            </div>
+<article class="skill-card">
+<div class="skill-icon">PY</div>
+<h3>Python</h3>
+<p>Basic programming and problem solving.</p>
+<div class="skill-line">
+<span style="width:72%"></span>
+</div>
+</article>
 
-            <div class="skills-grid">
+<article class="skill-card">
+<div class="skill-icon">AI</div>
+<h3>AI & Machine Learning</h3>
+<p>Fundamentals of AI and machine learning.</p>
+<div class="skill-line">
+<span style="width:68%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">PY</div>
-                    <h3>Python</h3>
-                    <p>Basic programming and problem solving.</p>
-                    <div class="skill-line">
-                        <span style="width: 72%;"></span>
-                    </div>
-                </article>
+<article class="skill-card">
+<div class="skill-icon">DS</div>
+<h3>Data Science</h3>
+<p>Data analysis and practical data-driven work.</p>
+<div class="skill-line">
+<span style="width:65%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">AI</div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Fundamentals of AI and machine learning.</p>
-                    <div class="skill-line">
-                        <span style="width: 68%;"></span>
-                    </div>
-                </article>
+<article class="skill-card">
+<div class="skill-icon">WEB</div>
+<h3>HTML & CSS</h3>
+<p>Responsive frontend development.</p>
+<div class="skill-line">
+<span style="width:82%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">DS</div>
-                    <h3>Data Science</h3>
-                    <p>Data analysis and practical data-driven work.</p>
-                    <div class="skill-line">
-                        <span style="width: 65%;"></span>
-                    </div>
-                </article>
+<article class="skill-card">
+<div class="skill-icon">JS</div>
+<h3>JavaScript</h3>
+<p>Interactive web development.</p>
+<div class="skill-line">
+<span style="width:62%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">WEB</div>
-                    <h3>HTML & CSS</h3>
-                    <p>Responsive frontend development and UI structure.</p>
-                    <div class="skill-line">
-                        <span style="width: 82%;"></span>
-                    </div>
-                </article>
+<article class="skill-card">
+<div class="skill-icon">GIT</div>
+<h3>Git & GitHub</h3>
+<p>Version control and repository management.</p>
+<div class="skill-line">
+<span style="width:76%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">JS</div>
-                    <h3>JavaScript</h3>
-                    <p>Basic interactive web development.</p>
-                    <div class="skill-line">
-                        <span style="width: 62%;"></span>
-                    </div>
-                </article>
+<article class="skill-card">
+<div class="skill-icon">VS</div>
+<h3>VS Code</h3>
+<p>Development environment for projects.</p>
+<div class="skill-line">
+<span style="width:85%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">GIT</div>
-                    <h3>Git & GitHub</h3>
-                    <p>Version control and project repository management.</p>
-                    <div class="skill-line">
-                        <span style="width: 76%;"></span>
-                    </div>
-                </article>
+<article class="skill-card">
+<div class="skill-icon">DB</div>
+<h3>Backend & Databases</h3>
+<p>Currently learning backend development.</p>
+<div class="skill-line">
+<span style="width:55%"></span>
+</div>
+</article>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">VS</div>
-                    <h3>VS Code</h3>
-                    <p>Development environment for building projects.</p>
-                    <div class="skill-line">
-                        <span style="width: 85%;"></span>
-                    </div>
-                </article>
+</div>
 
-                <article class="skill-card reveal">
-                    <div class="skill-icon">DB</div>
-                    <h3>Backend & Databases</h3>
-                    <p>Currently learning backend development and databases.</p>
-                    <div class="skill-line">
-                        <span style="width: 55%;"></span>
-                    </div>
-                </article>
+</section>
 
-            </div>
 
-        </section>
+<!-- ================= EDUCATION ================= -->
 
+<section id="education" class="section">
 
-        <!-- ===================== EDUCATION ===================== -->
+<div class="section-heading">
 
-        <section id="education" class="section">
+<p class="section-kicker">
+EDUCATION
+</p>
 
-            <div class="section-heading reveal">
+<h2>
+My academic
+<span>journey</span>
+</h2>
 
-                <p class="section-kicker">
-                    EDUCATION
-                </p>
+</div>
 
-                <h2>
-                    My academic
-                    <span>journey</span>
-                </h2>
+<div class="education-card">
 
-            </div>
+<div class="education-year">
+2025 - 2028
+</div>
 
-            <div class="education-card reveal">
+<div class="education-main">
 
-                <div class="education-year">
-                    2025 - 2028
-                </div>
+<p class="education-type">
+BACHELOR'S DEGREE
+</p>
 
-                <div class="education-main">
+<h3>
+B.Tech – Computer Science and Engineering (CSM)
+</h3>
 
-                    <p class="education-type">
-                        BACHELOR'S DEGREE
-                    </p>
+<h4>
+Narayana Engineering College, Gudur
+</h4>
 
-                    <h3>
-                        B.Tech – Computer Science and Engineering (CSM)
-                    </h3>
+<div class="education-details">
+<span>3rd Year</span>
+<span>CGPA: 7.9</span>
+<span>AIML Specialization</span>
+</div>
 
-                    <h4>
-                        Narayana Engineering College, Gudur
-                    </h4>
+</div>
 
-                    <div class="education-details">
+</div>
 
-                        <span>3rd Year</span>
-                        <span>CGPA: 7.9</span>
-                        <span>AIML Specialization</span>
+</section>
 
-                    </div>
 
-                </div>
+<!-- ================= EXPERIENCE ================= -->
 
-            </div>
+<section id="experience" class="section section-dark">
 
-        </section>
+<div class="section-heading">
 
+<p class="section-kicker">
+EXPERIENCE
+</p>
 
-        <!-- ===================== EXPERIENCE ===================== -->
+<h2>
+Internship &
+<span>professional work</span>
+</h2>
 
-        <section id="experience" class="section section-dark">
+</div>
 
-            <div class="section-heading reveal">
+<div class="experience-list">
 
-                <p class="section-kicker">
-                    EXPERIENCE
-                </p>
+<article class="experience-card">
 
-                <h2>
-                    Internship &
-                    <span>professional work</span>
-                </h2>
+<div class="experience-header">
 
-            </div>
+<div>
 
-            <div class="experience-list">
+<span class="experience-type">
+INTERNSHIP
+</span>
 
-                <!-- Horizon -->
+<h3>
+Full Stack Development Intern
+</h3>
 
-                <article class="experience-card reveal">
+<h4>
+Horizon TechX
+</h4>
 
-                    <div class="experience-header">
+</div>
 
-                        <div>
+<span class="experience-status completed">
+Completed
+</span>
 
-                            <span class="experience-type">
-                                INTERNSHIP
-                            </span>
+</div>
 
-                            <h3>
-                                Full Stack Development Intern
-                            </h3>
+<p>
+Completed internship projects involving a social media platform and an e-commerce website.
+Gained practical exposure to frontend development, backend concepts, GitHub,
+and web application features.
+</p>
 
-                            <h4>
-                                Horizon TechX
-                            </h4>
+<div class="tags">
+<span>HTML5</span>
+<span>CSS3</span>
+<span>JavaScript</span>
+<span>Node.js</span>
+<span>Express.js</span>
+<span>MongoDB</span>
+<span>GitHub</span>
+</div>
 
-                        </div>
+</article>
 
-                        <span class="experience-status completed">
-                            Completed
-                        </span>
 
-                    </div>
+<article class="experience-card">
 
-                    <p>
-                        Completed internship projects involving a social media platform and an e-commerce website.
-                        Gained practical exposure to frontend development, basic backend concepts, project structure,
-                        GitHub, and web application features.
-                    </p>
+<div class="experience-header">
 
-                    <div class="tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Node.js</span>
-                        <span>Express.js</span>
-                        <span>MongoDB</span>
-                        <span>GitHub</span>
-                    </div>
+<div>
 
-                </article>
+<span class="experience-type">
+INTERNSHIP
+</span>
 
+<h3>
+Full Stack Developer Intern
+</h3>
 
-                <!-- EdVyro -->
+<h4>
+EdVyro
+</h4>
 
-                <article class="experience-card reveal">
+</div>
 
-                    <div class="experience-header">
+<span class="experience-status completed">
+Completed
+</span>
 
-                        <div>
+</div>
 
-                            <span class="experience-type">
-                                INTERNSHIP
-                            </span>
+<p>
+Completed full stack development tasks and practical web application projects during the
+EdVyro internship, gaining hands-on experience in web development,
+APIs, backend integration, and GitHub workflows.
+</p>
 
-                            <h3>
-                                Full Stack Developer Intern
-                            </h3>
+<div class="tags">
+<span>Full Stack Development</span>
+<span>Web Development</span>
+<span>GitHub</span>
+</div>
 
-                            <h4>
-                                EdVyro
-                            </h4>
+</article>
 
-                        </div>
+</div>
 
-                        <span class="experience-status completed">
-                            Completed
-                        </span>
+</section>
 
-                    </div>
 
-                    <p>
-                        Completed full stack development tasks and practical web application projects during the
-                        EdVyro internship, gaining hands-on experience in web development, APIs, backend integration,
-                        and GitHub-based workflows.
-                    </p>
+<!-- ================= PROJECTS ================= -->
 
-                    <div class="tags">
-                        <span>Full Stack Development</span>
-                        <span>Web Development</span>
-                        <span>GitHub</span>
-                    </div>
+<section id="projects" class="section">
 
-                </article>
+<div class="section-heading">
 
-            </div>
+<p class="section-kicker">
+PROJECTS
+</p>
 
-        </section>
+<h2>
+Things I've
+<span>built</span>
+</h2>
 
+</div>
 
-        <!-- ===================== PROJECTS ===================== -->
+<div class="projects-grid">
 
-        <section id="projects" class="section">
+<article class="project-card project-featured">
 
-            <div class="section-heading reveal">
+<div class="project-top">
 
-                <p class="section-kicker">
-                    PROJECTS
-                </p>
+<span class="project-number">
+01
+</span>
 
-                <h2>
-                    Things I've
-                    <span>built</span>
-                </h2>
+<a
+href="https://github.com/jaswanth778899-blip/HorizonTechX_SocialMedia"
+target="_blank"
+class="project-link">
+GitHub ↗
+</a>
 
-            </div>
+</div>
 
+<div class="project-content">
 
-            <div class="projects-grid">
+<p class="project-category">
+FULL STACK WEB APPLICATION
+</p>
 
-                <!-- Project 1 -->
+<h3>
+HorizonTechX Social Media Platform
+</h3>
 
-                <article class="project-card project-featured reveal">
+<p>
+A mini social media web application featuring user registration and login,
+JWT authentication, creating posts, likes, comments, user profiles,
+and follow/unfollow functionality.
+</p>
 
-                    <div class="project-top">
+<div class="tags">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Node.js</span>
+<span>Express.js</span>
+<span>MongoDB</span>
+<span>JWT</span>
+</div>
 
-                        <span class="project-number">
-                            01
-                        </span>
+</div>
 
-                        <a href="https://github.com/jaswanth778899-blip/HorizonTechX_SocialMedia"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="project-link">
-                            GitHub ↗
-                        </a>
+</article>
 
-                    </div>
 
-                    <div class="project-content">
+<article class="project-card">
 
-                        <p class="project-category">
-                            FULL STACK WEB APPLICATION
-                        </p>
+<div class="project-top">
 
-                        <h3>
-                            HorizonTechX Social Media Platform
-                        </h3>
+<span class="project-number">
+02
+</span>
 
-                        <p>
-                            A mini social media web application featuring user registration and login,
-                            JWT authentication, creating posts, likes, comments, user profiles,
-                            and follow/unfollow functionality.
-                        </p>
+<a
+href="https://github.com/jaswanth778899-blip/HorizonTechX_ECommerce"
+target="_blank"
+class="project-link">
+GitHub ↗
+</a>
 
-                        <div class="tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>MongoDB</span>
-                            <span>JWT</span>
-                        </div>
+</div>
 
-                    </div>
+<div class="project-content">
 
-                </article>
+<p class="project-category">
+E-COMMERCE APPLICATION
+</p>
 
+<h3>
+HorizonTechX E-Commerce Website
+</h3>
 
-                <!-- Project 2 -->
+<p>
+A responsive e-commerce website with product listing,
+product details, shopping cart, authentication,
+orders and product browsing.
+</p>
 
-                <article class="project-card reveal">
+<div class="tags">
+<span>HTML5</span>
+<span>CSS3</span>
+<span>JavaScript</span>
+<span>Node.js</span>
+<span>Express.js</span>
+<span>MongoDB</span>
+</div>
 
-                    <div class="project-top">
+</div>
 
-                        <span class="project-number">
-                            02
-                        </span>
+</article>
 
-                        <a href="https://github.com/jaswanth778899-blip/HorizonTechX_ECommerce"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="project-link">
-                            GitHub ↗
-                        </a>
 
-                    </div>
+<article class="project-card">
 
-                    <div class="project-content">
+<div class="project-top">
 
-                        <p class="project-category">
-                            E-COMMERCE APPLICATION
-                        </p>
+<span class="project-number">
+03
+</span>
 
-                        <h3>
-                            HorizonTechX E-Commerce Website
-                        </h3>
+<a
+href="https://github.com/jaswanth778899-blip/Panopticon-Intelligent-Exam-Proctoring"
+target="_blank"
+class="project-link">
+GitHub ↗
+</a>
 
-                        <p>
-                            A responsive e-commerce website with product listing, product details,
-                            shopping cart, user login and registration, order placement,
-                            order management, product search and browsing.
-                        </p>
+</div>
 
-                        <div class="tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>MongoDB</span>
-                        </div>
+<div class="project-content">
 
-                    </div>
+<p class="project-category">
+AI / MACHINE LEARNING
+</p>
 
-                </article>
+<h3>
+Panopticon – Intelligent Exam Proctoring
+</h3>
 
+<p>
+An AI-based intelligent exam proctoring project using machine learning.
+</p>
 
-                <!-- Project 3 -->
+<div class="tags">
+<span>Python</span>
+<span>Machine Learning</span>
+<span>Jupyter Notebook</span>
+<span>Data</span>
+</div>
 
-                <article class="project-card reveal">
+</div>
 
-                    <div class="project-top">
+</article>
 
-                        <span class="project-number">
-                            03
-                        </span>
 
-                        <a href="https://github.com/jaswanth778899-blip/Panopticon-Intelligent-Exam-Proctoring"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="project-link">
-                            GitHub ↗
-                        </a>
+<article class="project-card project-completed">
 
-                    </div>
+<div class="project-top">
 
-                    <div class="project-content">
+<span class="project-number">
+04
+</span>
 
-                        <p class="project-category">
-                            AI / MACHINE LEARNING
-                        </p>
+<span class="project-status completed">
+✓ Completed
+</span>
 
-                        <h3>
-                            Panopticon – Intelligent Exam Proctoring
-                        </h3>
+</div>
 
-                        <p>
-                            An AI-based intelligent exam proctoring project using machine learning.
-                            The repository contains a Jupyter Notebook and event/telemetry datasets
-                            related to exam monitoring.
-                        </p>
+<div class="project-content">
 
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Jupyter Notebook</span>
-                            <span>Data</span>
-                        </div>
+<p class="project-category">
+EDVYRO • FULL STACK
+</p>
 
-                    </div>
+<h3>
+Internship API
+</h3>
 
-                </article>
+<p>
+A completed full stack internship project involving backend APIs
+and web application functionality.
+</p>
 
+<div class="tags">
+<span>Full Stack</span>
+<span>API</span>
+<span>Node.js</span>
+<span>Express.js</span>
+<span>MongoDB</span>
+</div>
 
-                <!-- Project 4 - COMPLETED -->
+<a
+href="https://github.com/jaswanth778899-blip/internship-api"
+target="_blank"
+class="project-button">
+View Repository ↗
+</a>
 
-                <article class="project-card project-completed reveal">
+</div>
 
-                    <div class="project-top">
+</article>
 
-                        <span class="project-number">
-                            04
-                        </span>
 
-                        <span class="project-status completed">
-                            ✓ Completed
-                        </span>
+<article class="project-card project-completed">
 
-                    </div>
+<div class="project-top">
 
-                    <div class="project-content">
+<span class="project-number">
+05
+</span>
 
-                        <p class="project-category">
-                            EDVYRO • FULL STACK
-                        </p>
+<span class="project-status completed">
+✓ Completed
+</span>
 
-                        <h3>
-                            Internship API
-                        </h3>
+</div>
 
-                        <p>
-                            A full stack internship project developed during the EdVyro internship,
-                            completed with practical implementation of backend APIs and web application functionality.
-                        </p>
+<div class="project-content">
 
-                        <div class="project-bottom">
+<p class="project-category">
+EDVYRO • SECURITY
+</p>
 
-                            <div class="tags">
-                                <span>Full Stack</span>
-                                <span>API</span>
-                                <span>Node.js</span>
-                                <span>Express.js</span>
-                                <span>MongoDB</span>
-                            </div>
+<h3>
+Secure Application Integration
+</h3>
 
-                        </div>
+<p>
+A completed full stack internship project focused on secure application
+integration, authentication, API communication and security concepts.
+</p>
 
-                        <a href="https://github.com/jaswanth778899-blip/internship-api"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="project-button">
-                            View Repository ↗
-                        </a>
+<div class="tags">
+<span>Full Stack</span>
+<span>Security</span>
+<span>Authentication</span>
+<span>API</span>
+</div>
 
-                    </div>
+<a
+href="https://github.com/jaswanth778899-blip/secure-application-integration"
+target="_blank"
+class="project-button">
+View Repository ↗
+</a>
 
-                </article>
+</div>
 
+</article>
 
-                <!-- Project 5 - COMPLETED -->
+</div>
 
-                <article class="project-card project-completed reveal">
+</section>
 
-                    <div class="project-top">
 
-                        <span class="project-number">
-                            05
-                        </span>
+<!-- ================= INTERESTS ================= -->
 
-                        <span class="project-status completed">
-                            ✓ Completed
-                        </span>
+<section class="section section-dark">
 
-                    </div>
+<div class="section-heading">
 
-                    <div class="project-content">
+<p class="section-kicker">
+CAREER INTEREST
+</p>
 
-                        <p class="project-category">
-                            EDVYRO • SECURITY
-                        </p>
+<h2>
+Areas I want to
+<span>grow in</span>
+</h2>
 
-                        <h3>
-                            Secure Application Integration
-                        </h3>
+</div>
 
-                        <p>
-                            A full stack internship project focused on secure application integration,
-                            authentication, API communication, and practical web application security concepts.
-                        </p>
+<div class="interest-grid">
 
-                        <div class="project-bottom">
+<div class="interest-card">
+<span>01</span>
 
-                            <div class="tags">
-                                <span>Full Stack</span>
-                                <span>Security</span>
-                                <span>Authentication</span>
-                                <span>API</span>
-                            </div>
+<h3>
+Full-Stack Development
+</h3>
 
-                        </div>
+<p>
+Building complete web applications from frontend interfaces to backend services.
+</p>
 
-                        <a href="https://github.com/jaswanth778899-blip/secure-application-integration"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="project-button">
-                            View Repository ↗
-                        </a>
+</div>
 
-                    </div>
 
-                </article>
+<div class="interest-card">
+<span>02</span>
 
-            </div>
+<h3>
+Web Application Development
+</h3>
 
-        </section>
+<p>
+Creating responsive and practical applications for real-world use cases.
+</p>
 
+</div>
 
-        <!-- ===================== INTERESTS ===================== -->
 
-        <section class="section section-dark">
+<div class="interest-card">
+<span>03</span>
 
-            <div class="section-heading reveal">
+<h3>
+AI / ML Applications
+</h3>
 
-                <p class="section-kicker">
-                    CAREER INTEREST
-                </p>
+<p>
+Exploring intelligent systems and machine learning applications.
+</p>
 
-                <h2>
-                    Areas I want to
-                    <span>grow in</span>
-                </h2>
+</div>
 
-            </div>
+</div>
 
-            <div class="interest-grid">
+</section>
 
-                <div class="interest-card reveal">
-                    <span>01</span>
-                    <h3>Full-Stack Development</h3>
-                    <p>
-                        Building complete web applications from frontend interfaces to backend services.
-                    </p>
-                </div>
 
-                <div class="interest-card reveal">
-                    <span>02</span>
-                    <h3>Web Application Development</h3>
-                    <p>
-                        Creating responsive and practical applications for real-world use cases.
-                    </p>
-                </div>
+<!-- ================= CONTACT ================= -->
 
-                <div class="interest-card reveal">
-                    <span>03</span>
-                    <h3>AI / ML Applications</h3>
-                    <p>
-                        Exploring the use of intelligent systems and machine learning in applications.
-                    </p>
-                </div>
+<section id="contact" class="section">
 
-            </div>
+<div class="section-heading">
 
-        </section>
+<p class="section-kicker">
+CONTACT
+</p>
 
+<h2>
+Let's
+<span>connect</span>
+</h2>
 
-        <!-- ===================== CONTACT ===================== -->
+</div>
 
-        <section id="contact" class="section">
+<div class="contact-grid">
 
-            <div class="section-heading reveal">
+<div class="contact-info">
 
-                <p class="section-kicker">
-                    CONTACT
-                </p>
+<h3>
+Have a project or opportunity?
+</h3>
 
-                <h2>
-                    Let's
-                    <span>connect</span>
-                </h2>
+<p>
+I'm interested in internships, projects, collaborations and opportunities
+that help me grow as a developer.
+</p>
 
-            </div>
+<div class="contact-detail">
 
-            <div class="contact-grid">
+<div class="contact-icon">
+@
+</div>
 
-                <div class="contact-info reveal">
+<div>
+<span>Email</span>
 
-                    <h3>
-                        Have a project or opportunity?
-                    </h3>
+<a href="mailto:jaswanth778899@gmail.com">
+jaswanth778899@gmail.com
+</a>
 
-                    <p>
-                        I'm interested in internships, projects, collaborations and opportunities
-                        that help me grow as a developer.
-                    </p>
+</div>
 
-                    <div class="contact-detail">
+</div>
 
-                        <div class="contact-icon">
-                            @
-                        </div>
 
-                        <div>
-                            <span>Email</span>
+<div class="contact-detail">
 
-                            <a href="mailto:jaswanth778899@gmail.com">
-                                jaswanth778899@gmail.com
-                            </a>
-                        </div>
+<div class="contact-icon">
+#
+</div>
 
-                    </div>
+<div>
+<span>Phone</span>
 
+<a href="tel:+917981497772">
++91 79814 97772
+</a>
 
-                    <div class="contact-detail">
+</div>
 
-                        <div class="contact-icon">
-                            #
-                        </div>
+</div>
 
-                        <div>
-                            <span>Phone</span>
 
-                            <a href="tel:+917981497772">
-                                +91 79814 97772
-                            </a>
-                        </div>
+<div class="contact-detail">
 
-                    </div>
+<div class="contact-icon">
++
+</div>
 
+<div>
 
-                    <div class="contact-detail">
+<span>Location</span>
 
-                        <div class="contact-icon">
-                            +
-                        </div>
+<p>
+Nellore District, Andhra Pradesh, India
+</p>
 
-                        <div>
-                            <span>Location</span>
+</div>
 
-                            <p>
-                                Nellore District, Andhra Pradesh, India
-                            </p>
-                        </div>
+</div>
 
-                    </div>
 
+<div class="contact-detail">
 
-                    <div class="contact-detail">
+<div class="contact-icon">
+↗
+</div>
 
-                        <div class="contact-icon">
-                            ↗
-                        </div>
+<div>
 
-                        <div>
-                            <span>GitHub</span>
+<span>GitHub</span>
 
-                            <a href="https://github.com/jaswanth778899-blip"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                github.com/jaswanth778899-blip
-                            </a>
-                        </div>
+<a
+href="https://github.com/jaswanth778899-blip"
+target="_blank">
+github.com/jaswanth778899-blip
+</a>
 
-                    </div>
+</div>
 
-                </div>
+</div>
 
+</div>
 
-                <form id="contactForm" class="contact-form reveal">
 
-                    <div class="form-row">
+<form id="contactForm" class="contact-form">
 
-                        <input type="text"
-                               id="name"
-                               placeholder="Your name"
-                               required>
+<div class="form-row">
 
-                        <input type="email"
-                               id="visitorEmail"
-                               placeholder="Your email"
-                               required>
+<input
+type="text"
+id="name"
+placeholder="Your name"
+required>
 
-                    </div>
+<input
+type="email"
+id="visitorEmail"
+placeholder="Your email"
+required>
 
-                    <input type="text"
-                           id="subject"
-                           placeholder="Subject"
-                           required>
+</div>
 
-                    <textarea id="message"
-                              rows="7"
-                              placeholder="Write your message..."
-                              required></textarea>
+<input
+type="text"
+id="subject"
+placeholder="Subject"
+required>
 
-                    <button type="submit"
-                            class="btn btn-primary form-button">
-                        Send Message
-                        <span>→</span>
-                    </button>
+<textarea
+id="message"
+rows="7"
+placeholder="Write your message..."
+required></textarea>
 
-                    <p id="formMessage"
-                       class="form-message"></p>
+<button
+type="submit"
+class="btn btn-primary">
+Send Message →
+</button>
 
-                </form>
+<p id="formMessage"></p>
 
-            </div>
+</form>
 
-        </section>
+</div>
 
-    </main>
+</section>
 
+</main>
 
-    <!-- ===================== FOOTER ===================== -->
 
-    <footer class="footer">
+<!-- ================= FOOTER ================= -->
 
-        <div class="footer-inner">
+<footer class="footer">
 
-            <div>
+<div class="footer-inner">
 
-                <a href="#home" class="footer-logo">
-                    Jaswanth<span>.</span>
-                </a>
+<div>
 
-                <p>
-                    AI & ML Student | Data Science Enthusiast | Full Stack Developer
-                </p>
+<a href="#home" class="footer-logo">
+Jaswanth<span>.</span>
+</a>
 
-            </div>
+<p>
+AI & ML Student | Data Science Enthusiast | Full Stack Developer
+</p>
 
+</div>
 
-            <div class="footer-links">
+<div class="footer-links">
 
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-        <div class="footer-bottom">
+<div class="footer-bottom">
 
-            <p>
-                © <span id="year"></span> Manavarti Jaswanth. All rights reserved.
-            </p>
+<p>
+© <span id="year"></span> Manavarti Jaswanth. All rights reserved.
+</p>
 
-        </div>
+</div>
 
-    </footer>
+</footer>
 
 
-    <!-- ===================== BACK TO TOP ===================== -->
+<button
+id="backToTop"
+class="back-to-top">
+↑
+</button>
 
-    <button id="backToTop"
-            class="back-to-top"
-            aria-label="Back to top">
-        ↑
-    </button>
 
+<script>
 
-    <script src="script.js"></script>
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+if (menuBtn) {
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+
+/* Close mobile menu */
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* =========================
+   YEAR
+========================= */
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const backToTop =
+    document.getElementById("backToTop");
+
+window.addEventListener("scroll", function() {
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+});
+
+
+if (backToTop) {
+
+    backToTop.addEventListener("click", function() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const email =
+            document.getElementById("visitorEmail").value;
+
+        const subject =
+            document.getElementById("subject").value;
+
+        const message =
+            document.getElementById("message").value;
+
+        const mailBody =
+            "Name: " + name +
+            "%0AEmail: " + email +
+            "%0A%0A" +
+            message;
+
+        const mailto =
+            "mailto:jaswanth778899@gmail.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            mailBody;
+
+        window.location.href = mailto;
+
+    });
+
+}
+
+</script>
 
 </body>
-
 </html>
-```
